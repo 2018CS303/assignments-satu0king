@@ -15,7 +15,14 @@
 
 `docker create -it --name docker_class_2018 ubuntu /bin/bash`
 
-2. Install packages required for the students. For example, training environment for C programming. 
+2. Start and attach to container
+
+```
+docker start docker_class_2018
+docker attach docker_class_2018
+```
+
+3. Install packages required for the students. For example, training environment for C programming. 
 
 ```
 apt update
@@ -23,8 +30,8 @@ apt install vim
 apt install gcc
 ```
 
-3. Create `questions.txt`, `instructions.txt` and save them.
-4. Commit the container 
+4. Create `questions.txt`, `instructions.txt` and save them.
+5. Commit the container 
 
 `docker commit -a "Satvik Ramaprasad" 3352d9ff28e1 docker_class_image_2018`
 
