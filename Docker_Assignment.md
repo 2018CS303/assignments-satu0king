@@ -73,7 +73,16 @@ Now our training container image is ready.
         docker start <name> # Starts the container
         docker exec -it <name> /bin/bash
         ```
-        
+
+## Localisation
+To ensure that the users cannot access others users' containers, we need to do add the following lines to every user's .bashrc. This step can be automated by a script (creation of linux users and addition to bashrc files). 
+
+```
+docker start -ai <name>
+exit
+```
+
+When the user connects to the system, the user will directly connect to the docker container. Now, when he exits the container, the next command `exit` forces the user to exit the system itself, without a chance to access other containers. Inside the container, all data is strictly localised by default and users cannot connect to other people's containers because of network isolation.        
 
 ## Monitoring The Containers
 The instructor can monitor the containers in many ways. 
