@@ -75,7 +75,7 @@ Now our training container image is ready.
         ```
 
 ## Localisation
-To ensure that the users cannot access others users' containers, we need to do add the following lines to every user's .bashrc. This step can be automated by a script (creation of linux users and addition to bashrc files). 
+To ensure that the users cannot access others users' containers, we need to do add the following lines to every user's .bashrc. This step can be automated by a script (creation of linux users and addition to `.bashrc` files). 
 
 ```
 docker start -ai <name>
